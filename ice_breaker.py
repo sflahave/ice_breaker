@@ -45,7 +45,7 @@ def ice_break_with(name: str) -> Tuple[Summary, str]:
 
     res:Summary = chain.invoke(input={"information": linkedin_data, "bluesky_posts": bluesky_posts})
 
-    return res, linkedin_data.profile_pic_url
+    return res, linkedin_data.get("profile_pic_url")
 
 
 if __name__ == "__main__":
