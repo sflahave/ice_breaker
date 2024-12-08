@@ -19,6 +19,12 @@ To run this project, you will need to add the following environment variables to
 
 `PROXYCURL_API_KEY`
 
+`SERPAPI_API_KEY`
+
+`BLUESKY_HANDLE`
+
+`BLUESKY_PASSWORD`
+
 `TAVILY_API_KEY`
 
 `TWITTER_API_KEY`
