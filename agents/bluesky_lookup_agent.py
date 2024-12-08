@@ -19,7 +19,20 @@ def lookup(name: str) -> str:
     )
     template = """
        Given the name {name_of_person} I want you to find a link to their BlueSky profile page and extract from it their BlueSky handle.
-       Include only the person's BlueSky handle in the final answer
+       Include only the person's BlueSky handle in the final answer.
+       
+       Examples:
+       Profile URL: https://publictest.bsky.cz/profile/sflahave.bsky.social/post/3lapnow3mb22c
+       Expected Output: sflahave.bsky.social
+       
+       Profile URL: https://bsky.app/profile/flavorflav.bsky.social
+       Expected Output: flavorflav.bsky.social
+       
+       Profile URL: https://bsky.app/profile/jakearchibald.com/post/3lbhh6ut5ec2k
+       Expected Output: jakearchibald.com
+       
+       Profile URL: https://bsky.app/profile/danabra.mov/post/3kkylqtlo722q
+       Expected Output: danabra.mov
     """
     prompt_template = PromptTemplate(
         template=template, input_variables=["name_of_person"]
@@ -50,4 +63,7 @@ def lookup(name: str) -> str:
 
 
 if __name__ == "__main__":
-    print(lookup(name="Shawn Flahave"))
+    # print(lookup(name="Shawn Flahave"))
+    # print(lookup(name="Flavor Flav"))
+    print(lookup(name="Mark Cuban"))
+    # print(lookup(name="Dan Abramov"))

@@ -45,5 +45,5 @@ def scrape_bluesky_posts(bluesky_profile_handle: str):
 if __name__ == "__main__":
     # post_bluesky_message("Nothing to see here, just trying out the atproto Python SDK.")
     print(
-        scrape_bluesky_posts(bluesky_profile_handle="@sflahave.bsky.social")
+        scrape_bluesky_posts(bluesky_profile_handle="sflahave.bsky.social")
     )

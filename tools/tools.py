@@ -50,9 +50,7 @@ def get_bluesky_profile_url(name: str):
     results = search.get_dict()
     formatted_results = [
         {
-            "title": result["title"],
             "url": result["link"],
-            "content": result["snippet"]
         } for result in results["organic_results"] if "bsky" in result["link"].lower()
     ]
 
